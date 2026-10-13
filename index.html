@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#092d50"/><title>Health Hackathon 3.0 | 28th & 29th January 2027 | VIT Bhopal</title><script>
+(function(){
+  try {
+    var saved = localStorage.getItem('hh3_theme') || 'light';
+    var resolved = saved;
+    if (saved === 'system') {
+      resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', resolved);
+    document.documentElement.setAttribute('data-theme-mode', saved);
+    document.documentElement.style.colorScheme = resolved;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', resolved === 'dark' ? '#081420' : '#092d50');
+  } catch(e) {}
+})();
+</script><meta name="description" content="Global Health Access Innovation Challenge – Next Generation. Jointly organized by VIT Bhopal University and Johns Hopkins Whiting School of Engineering on 28th & 29th January 2027. Workshop: 27th January 2027. Ten healthcare innovation tracks; teams of up to six."/><meta property="og:title" content="Health Hackathon 3.0 | 28th & 29th January 2027"/><meta property="og:description" content="Global Health Access Innovation Challenge – Next Generation. VIT Bhopal University & Johns Hopkins Whiting School of Engineering, 28th & 29th January 2027."/><meta property="og:type" content="website"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>

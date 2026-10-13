@@ -1,0 +1,569 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   DARK MODE SYSTEM - Health Hackathon 3.0
+   Default is light mode; activated via html[data-theme="dark"]
+   ══════════════════════════════════════════════════════════════════════════ */
+
+html[data-theme="dark"] {
+  /* Dynamic CSS Variable Tokens */
+  --bg-primary: #081524;
+  --bg-surface: #0e2238;
+  --bg-card: #132b45;
+  --bg-card-subtle: #173352;
+  --text-primary: #edf5fa;
+  --text-secondary: #9cb8cc;
+  --text-muted: #7fa1b9;
+  --border-line: #1c3d5e;
+  --border-subtle: #244b73;
+  --nav-bg: rgba(8, 21, 36, 0.94);
+
+  /* Override base typography & root backgrounds */
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  /* Override component variables */
+  --navy: #081b30;
+  --surface: #0e2238;
+  --muted: #94b2c7;
+  --line: #1c3d5e;
+
+  /* Theme Toggle styling */
+  --toggle-bg: rgba(255, 255, 255, 0.08);
+  --toggle-border: rgba(255, 255, 255, 0.16);
+  --toggle-thumb-bg: #146193;
+  --toggle-thumb-color: #ffffff;
+  --toggle-text: #8fb1c7;
+  --toggle-text-hover: #ffffff;
+}
+
+/* Light theme toggle variables in header */
+html[data-theme="light"] {
+  --toggle-bg: #eaf1f6;
+  --toggle-border: #d2e1eb;
+  --toggle-thumb-bg: #ffffff;
+  --toggle-thumb-color: #092d50;
+  --toggle-text: #5f7a90;
+  --toggle-text-hover: #092d50;
+}
+
+/* Header & Nav */
+html[data-theme="dark"] .header {
+  background: var(--nav-bg);
+  border-bottom-color: var(--border-line);
+}
+html[data-theme="dark"] .brand-divider {
+  background: var(--border-line);
+}
+html[data-theme="dark"] .desktop-nav a {
+  color: var(--text-secondary);
+}
+html[data-theme="dark"] .desktop-nav a:hover,
+html[data-theme="dark"] .desktop-nav a.active {
+  color: #72d6ea;
+}
+html[data-theme="dark"] .mobile-nav {
+  background: #0f2742;
+  border-color: var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+html[data-theme="dark"] .mobile-nav a {
+  color: var(--text-secondary);
+}
+html[data-theme="dark"] .mobile-nav a:hover,
+html[data-theme="dark"] .mobile-nav a.active {
+  background: #173b61;
+  color: #72d6ea;
+}
+html[data-theme="dark"] .menu-toggle {
+  color: var(--text-primary);
+}
+html[data-theme="dark"] .overflow-toggle {
+  color: var(--text-secondary);
+}
+html[data-theme="dark"] .overflow-toggle:hover,
+html[data-theme="dark"] .overflow-toggle:focus-visible {
+  background: #153454;
+  color: #72d6ea;
+}
+
+/* Buttons */
+html[data-theme="dark"] .button {
+  background: #146193;
+  border-color: #1f77b0;
+  color: #ffffff;
+}
+html[data-theme="dark"] .button:hover {
+  background: #197ab8;
+}
+html[data-theme="dark"] .button.secondary {
+  color: #7ad5e8;
+  border-color: #2a557b;
+  background: transparent;
+}
+html[data-theme="dark"] .button.secondary:hover {
+  background: #132e4b;
+  border-color: #3b74a3;
+}
+
+/* Hero Section */
+html[data-theme="dark"] .hero {
+  background: #06111e;
+}
+html[data-theme="dark"] .hero-sticky-frame {
+  background: linear-gradient(130deg, #071524 0%, #0a1c30 50%, #081729 100%);
+}
+html[data-theme="dark"] .hero-glass-card {
+  background: rgba(14, 34, 56, 0.88);
+  border-color: rgba(35, 75, 115, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .hero-edition-tag {
+  color: #e4f1f9;
+}
+html[data-theme="dark"] .hero-subtitle {
+  color: #d8ebf7;
+}
+html[data-theme="dark"] .hero-subtitle > span {
+  color: #6ed0e3;
+}
+html[data-theme="dark"] .hero-intro {
+  color: #9cb8cc;
+}
+html[data-theme="dark"] .hero-details > div {
+  background: rgba(18, 43, 70, 0.8);
+  border-color: #244e78;
+  color: #edf5fa;
+}
+html[data-theme="dark"] .hero-details small {
+  color: #94b3c9;
+}
+html[data-theme="dark"] .hero-details svg {
+  color: #6ed0e3;
+}
+html[data-theme="dark"] .hero-footnote {
+  color: #799cb5;
+}
+html[data-theme="dark"] .hero-metrics-bar {
+  background: rgba(11, 28, 46, 0.95);
+  border-top-color: #1c3f64;
+}
+html[data-theme="dark"] .hero-metrics > div + div {
+  border-left-color: #1c3f64;
+}
+html[data-theme="dark"] .hero-metrics strong {
+  color: #edf5fa;
+}
+html[data-theme="dark"] .hero-metrics small {
+  color: #8dafc7;
+}
+html[data-theme="dark"] .hero-metrics svg {
+  color: #61bfe0;
+}
+html[data-theme="dark"] .edition-mark img {
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+html[data-theme="dark"] .edition-mark span {
+  color: #95b6ce;
+}
+html[data-theme="dark"] .edition-mark strong {
+  color: #eaf3f9;
+}
+
+/* Headings & Section Typography */
+html[data-theme="dark"] h1, 
+html[data-theme="dark"] h2, 
+html[data-theme="dark"] h3, 
+html[data-theme="dark"] h4 {
+  color: #edf5fa;
+}
+html[data-theme="dark"] .section-heading h2 > span {
+  color: #739bb7;
+}
+html[data-theme="dark"] .heading-row > p {
+  color: #94b2c7;
+}
+html[data-theme="dark"] .eyebrow {
+  color: #61cae2;
+}
+
+/* Overview Section */
+html[data-theme="dark"] .overview {
+  background: #081524;
+}
+html[data-theme="dark"] .overview-body {
+  color: #9ebacf;
+}
+html[data-theme="dark"] .overview-note {
+  color: #8bb0c7;
+}
+
+/* Focus Areas (Tracks) */
+html[data-theme="dark"] .tracks-section {
+  background: #0b1e33;
+  border-block-color: #193859;
+}
+html[data-theme="dark"] .track {
+  border-top-color: #1c3d5f;
+}
+html[data-theme="dark"] .track:hover {
+  transform: translateX(4px);
+}
+html[data-theme="dark"] .track-number {
+  color: #648ba8;
+}
+html[data-theme="dark"] .track-icon {
+  background: #132f4c;
+  border-color: #245078;
+  color: #6bd0e5;
+}
+html[data-theme="dark"] .track p {
+  color: #98b6cb;
+}
+html[data-theme="dark"] .themes-note {
+  border-top-color: #1c3d5f;
+  color: #9ab7cc;
+}
+html[data-theme="dark"] .themes-note strong {
+  color: #e9f2f8;
+}
+
+/* Timeline Section */
+html[data-theme="dark"] .timeline-section {
+  background: #081524;
+}
+html[data-theme="dark"] .status-pill {
+  background: #0d283c;
+  border-color: #1e5571;
+  color: #8be1b5;
+}
+html[data-theme="dark"] .milestone:before {
+  background: #1b3d5e;
+}
+html[data-theme="dark"] .milestone-node {
+  background: #102740;
+  border-color: #234d75;
+  color: #8fb1c9;
+}
+html[data-theme="dark"] .past .milestone-node {
+  background: #143552;
+  color: #65c8e0;
+}
+html[data-theme="dark"] .next .milestone-node {
+  background: #146193;
+  border-color: #63d1e8;
+  color: #ffffff;
+  box-shadow: 0 0 0 5px rgba(20, 97, 147, 0.4);
+}
+html[data-theme="dark"] .milestone-content {
+  background: #0f2742;
+  border-color: #1e4469;
+}
+html[data-theme="dark"] .next .milestone-content {
+  background: #143455;
+  border-color: #2a6f9c;
+}
+html[data-theme="dark"] .phase-label {
+  color: #7fa4bf;
+}
+html[data-theme="dark"] .next-badge {
+  background: #124d73;
+  color: #88e0f5;
+}
+html[data-theme="dark"] .milestone-date {
+  color: #6acded;
+}
+html[data-theme="dark"] .timeline-caption {
+  color: #7a9cb3;
+}
+
+/* Awards Section */
+html[data-theme="dark"] .awards-section {
+  background: #07192c;
+}
+html[data-theme="dark"] .first-prize {
+  background: #113454;
+  border-color: #27577d;
+}
+html[data-theme="dark"] .other-prizes .prize {
+  background: #0d2740;
+  border-color: #1f4769;
+}
+html[data-theme="dark"] .other-prizes .prize:hover {
+  background: #153b5e;
+}
+html[data-theme="dark"] .fee-bar {
+  border-top-color: #1d4364;
+}
+
+/* Registration Section */
+html[data-theme="dark"] .registration-section {
+  background: #0b1d31;
+}
+html[data-theme="dark"] .registration-grid > div > p {
+  color: #9cb8cc;
+}
+html[data-theme="dark"] .registration-steps p {
+  color: #9cb8cc;
+}
+html[data-theme="dark"] .registration-steps strong {
+  color: #edf5fa;
+}
+html[data-theme="dark"] .registration-steps > div > span {
+  color: #60cbe0;
+}
+html[data-theme="dark"] .text-link {
+  color: #65ceee;
+  text-decoration-color: #2b6182;
+}
+html[data-theme="dark"] .text-link:hover {
+  color: #9fe2f8;
+}
+html[data-theme="dark"] .qr-panel {
+  background: #102945;
+  border-color: #224d75;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .qr-panel img {
+  border-color: #ffffff;
+  border-radius: 8px;
+  background: #ffffff;
+}
+html[data-theme="dark"] .qr-label {
+  color: #64cce3;
+}
+html[data-theme="dark"] .qr-panel p {
+  color: #97b5ca;
+}
+html[data-theme="dark"] .qr-fee {
+  color: #81a4bc;
+  border-top-color: #1d4366;
+}
+
+/* Gallery Section */
+html[data-theme="dark"] .gallery-section {
+  background: #081524;
+  border-top-color: #193859;
+}
+html[data-theme="dark"] .gallery-card {
+  background: #0f2742;
+  border-color: #1f456b;
+}
+html[data-theme="dark"] .gallery-card-inner {
+  background: #061524;
+}
+html[data-theme="dark"] .gallery-browser,
+html[data-theme="dark"] .gallery-video-section {
+  background: #0d2239;
+  border-color: #1f456b;
+}
+html[data-theme="dark"] .gallery-video-heading h3 { color: #edf5fa; }
+html[data-theme="dark"] .gallery-video-empty {
+  background: linear-gradient(135deg,#0a1b2e,#102945);
+  border-color: #315b7c;
+  color: #edf5fa;
+}
+html[data-theme="dark"] .gallery-more-btn {
+  background: #102945;
+  border-color: #245078;
+  color: #eaf3f9;
+}
+html[data-theme="dark"] .gallery-more-btn:hover {
+  background: #16375c;
+}
+html[data-theme="dark"] .gallery-footnote {
+  border-top-color: #1a3c5e;
+  color: #8dafc7;
+}
+html[data-theme="dark"] .gallery-footnote strong {
+  color: #edf5fa;
+}
+
+/* Committee Section & Accordions */
+html[data-theme="dark"] .committee-section {
+  background: #0b1e33;
+}
+html[data-theme="dark"] .committee-intro {
+  border-left-color: var(--gold);
+}
+html[data-theme="dark"] .committee-intro > p {
+  color: #98b6cc;
+}
+html[data-theme="dark"] .accordion {
+  border-color: #1d4266;
+}
+html[data-theme="dark"] .accordion summary {
+  color: #edf5fa;
+}
+html[data-theme="dark"] .accordion summary:hover,
+html[data-theme="dark"] .accordion summary:focus-visible {
+  color: #72d6ea;
+  background: #102945;
+}
+html[data-theme="dark"] .accordion-count {
+  color: #6fb0cb;
+}
+html[data-theme="dark"] .coordinator-list {
+  color: #98bad0;
+}
+html[data-theme="dark"] .partners {
+  border-top-color: #1c3e61;
+}
+html[data-theme="dark"] .person p,
+html[data-theme="dark"] .partners p {
+  color: #95b4c9;
+}
+
+/* Committee Member Portrait */
+html[data-theme="dark"] .member-portrait {
+  border-color: #214b73;
+  background: #0f2742;
+}
+html[data-theme="dark"] .member-portrait img {
+  background: #0f2742;
+}
+html[data-theme="dark"] .member-initials {
+  color: #6ed0e3;
+}
+
+/* Institutions Section */
+html[data-theme="dark"] .institutions-section {
+  background: #081524;
+}
+html[data-theme="dark"] .institution {
+  border-bottom-color: #1a3d60;
+}
+html[data-theme="dark"] .institution-copy p {
+  color: #98b6cb;
+}
+html[data-theme="dark"] .institution-photo > span {
+  color: #699abf;
+}
+html[data-theme="dark"] .institution-caption {
+  color: #7496ad;
+}
+
+/* Participation (FAQs) */
+html[data-theme="dark"] .participation-section {
+  background: #0b1e33;
+}
+html[data-theme="dark"] .participation-intro {
+  color: #95b3c7;
+}
+html[data-theme="dark"] .faq-list .details-body p {
+  color: #95b3c7;
+}
+
+/* Coordinators Section */
+html[data-theme="dark"] .coordinator-section {
+  background: #081524;
+  border-top-color: #1a3c5e;
+}
+html[data-theme="dark"] .coordinator-heading {
+  color: #edf5fa;
+}
+html[data-theme="dark"] .coordinator-card {
+  background: #0f2742;
+  border-color: #1e456b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+html[data-theme="dark"] .coordinator-card:focus-within,
+html[data-theme="dark"] .coordinator-card:hover {
+  border-color: #3b7da5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+html[data-theme="dark"] .coordinator-portrait {
+  background: #143557;
+  border-color: #2f7a9d;
+}
+html[data-theme="dark"] .coordinator-portrait > span {
+  color: #72d6ea;
+}
+html[data-theme="dark"] .coordinator-number {
+  color: #65ceee;
+  text-decoration-color: #265977;
+}
+html[data-theme="dark"] .coordinator-number:hover,
+html[data-theme="dark"] .coordinator-number:focus-visible {
+  color: #b3ecfc;
+  text-decoration-color: var(--cyan);
+}
+html[data-theme="dark"] .coordinator-actions a {
+  background: #14324f;
+  border-color: #224c73;
+  color: #8ecae6;
+}
+html[data-theme="dark"] .coordinator-actions a:hover,
+html[data-theme="dark"] .coordinator-actions a:focus-visible {
+  background: #1b4269;
+  border-color: #4b92b6;
+  color: #ffffff;
+}
+
+/* Contact Section */
+html[data-theme="dark"] .contact-section {
+  background: #051322;
+}
+html[data-theme="dark"] .contact-details > a:first-of-type {
+  border-bottom-color: #1c4263;
+}
+html[data-theme="dark"] .contact-details > p {
+  color: #9cb8cc;
+}
+
+/* Footer Section */
+footer {
+  background: #051424;
+  color: #9cb8cc;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding-block: 30px;
+}
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-bottom {
+  border-top-color: #193854;
+  color: #7496ab;
+}
+.footer-links a:hover {
+  color: #76d8ec;
+}
+
+@media (max-width: 980px) {
+  .footer-brand-wrap {
+    width: 100%;
+  }
+}
+
+/* Additional component polish for dark theme */
+html[data-theme="dark"] body {
+  background-color: #081524;
+  color: #edf5fa;
+}
+
+html[data-theme="dark"] .floating-top {
+  background: #146193;
+  border-color: #2b77a7;
+}
+
+html[data-theme="dark"] .floating-top:hover,
+html[data-theme="dark"] .floating-top:focus-visible {
+  background: #1d7dbb;
+}
+
+html[data-theme="dark"] :focus-visible {
+  outline-color: #5ec9dd;
+}
+
+/* Lightbox caption bar in dark theme */
+html[data-theme="dark"] .lightbox-caption-bar {
+  background: #0b1f33;
+  border-top-color: #1a3d5e;
+}

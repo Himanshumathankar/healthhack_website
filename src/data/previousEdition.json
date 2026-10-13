@@ -1,0 +1,108 @@
+{
+  "edition": "2026",
+  "source": "https://vitbhopal.ac.in/health-hackathon-2026-d/",
+  "applicability": "Unconfirmed. Never import into current-edition presentation.",
+  "detailedProblemStatements": [
+    [
+      "Telemedicine for Equitable Access",
+      "Develop a platform to provide remote healthcare services to underserved populations.",
+      "A scalable telemedicine system using video calls, chat, and remote diagnostics to connect patients in remote or underserved areas with healthcare providers, reducing access barriers.",
+      "Software"
+    ],
+    [
+      "Predictive Analytics for Preventive Care",
+      "Create a predictive model to identify at-risk patients for early intervention.",
+      "An AI-based platform analyzing patient data (e.g., vitals, medical history) to predict chronic disease risks and recommend preventive actions, improving outcomes and reducing costs.",
+      "Software/Hardware"
+    ],
+    [
+      "Resource Optimization for Underserved Clinics",
+      "Design a system to optimize resource allocation in resource-constrained clinics.",
+      "A software tool using data analytics to manage staff, equipment, and supplies efficiently, ensuring underserved clinics maximize care delivery with limited resources.",
+      "Software"
+    ],
+    [
+      "Community-Driven Health Empowerment",
+      "Build a platform to engage communities in proactive health management.",
+      "A mobile app enabling community health education, peer support, and local health campaigns to empower individuals to take charge of their health.",
+      "Software/Hardware"
+    ],
+    [
+      "Interoperable Health Data Systems",
+      "Develop a system for seamless health data sharing across providers.",
+      "A software platform using standardized protocols (e.g., FHIR) to enable secure, interoperable data exchange between hospitals, clinics, and EHRs, improving care coordination.",
+      "Software/Hardware"
+    ],
+    [
+      "AI for Chronic Disease Management",
+      "Create an AI tool to support ongoing management of chronic conditions.",
+      "An AI-driven platform that monitors patient data, predicts flare-ups, and provides personalized treatment plans for conditions like diabetes or hypertension.",
+      "Software/Hardware"
+    ],
+    [
+      "Maternal and Child Health Solutions",
+      "Design a solution to improve maternal and child health outcomes.",
+      "A mobile app providing prenatal/postnatal education, remote monitoring, and appointment reminders to reduce maternal and infant mortality, especially in low-resource settings.",
+      "Software/Hardware"
+    ],
+    [
+      "Mental Health Accessibility",
+      "Develop a tool to make mental health resources more accessible.",
+      "A digital platform offering teletherapy, self-help resources, and AI-driven mood tracking to provide affordable mental health support, particularly for underserved groups.",
+      "Software/Hardware"
+    ],
+    [
+      "Mobile Diagnostics for Remote Areas",
+      "Create portable diagnostic devices for use in remote locations.",
+      "A hardware-based solution with portable diagnostic tools (e.g., blood testers, ultrasound devices) integrated with a mobile app for real-time analysis and reporting in remote areas.",
+      "Hardware"
+    ],
+    [
+      "Emergency Care Systems",
+      "Build a system to enhance emergency response efficiency.",
+      "A software platform integrating real-time GPS, patient triage, and hospital availability to streamline emergency response and improve patient outcomes.",
+      "Software"
+    ],
+    [
+      "Affordable Healthcare Innovations",
+      "Develop cost-effective healthcare delivery solutions.",
+      "A combination of low-cost diagnostic devices and a software platform to provide affordable screenings and consultations, targeting low-income populations.",
+      "Software/Hardware"
+    ],
+    [
+      "Environmental Health Resilience",
+      "Create tools to address health impacts of environmental changes.",
+      "A software system using environmental and health data to predict and mitigate risks (e.g., air pollution-related asthma), with alerts and recommendations for communities.",
+      "Software"
+    ],
+    [
+      "Digital Health Literacy Tools",
+      "Design tools to improve health literacy among diverse populations.",
+      "A multilingual mobile app with interactive tutorials, videos, and quizzes to educate users on health topics, improving understanding and self-care.",
+      "Software"
+    ],
+    [
+      "AI-Enhanced Pharmacy Access",
+      "Develop an AI system to improve medication access and adherence.",
+      "An AI-powered platform that optimizes pharmacy inventory, predicts demand, and provides teleconsultations for prescriptions, ensuring access in underserved areas.",
+      "Software"
+    ],
+    [
+      "Elderly Care Innovations",
+      "Create solutions to enhance elderly healthcare and quality of life.",
+      "A combination of wearable health monitors and a software platform to track vitals, detect falls, and coordinate care for elderly patients, supporting independent living.",
+      "Software/Hardware"
+    ]
+  ],
+  "historicalRegistrationUrl": "https://tinyurl.com/HealthHackVITBJHU2026",
+  "requiresOrganizerConfirmation": [
+    "Detailed problem statements and required datasets",
+    "Formal eligibility, solo participation and team matching",
+    "Submission formats and judging criteria",
+    "Workshop agenda, session times, mentors and APIs",
+    "Accommodation, travel, refunds and payment policies",
+    "Incubation support and post-event benefits",
+    "Advisory committee and role assignments not printed in the new brochure",
+    "Prior news, feeds, gallery, telephone contacts and guidelines"
+  ]
+}
