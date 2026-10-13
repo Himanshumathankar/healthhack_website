@@ -4,15 +4,50 @@ import { galleryPhotos, type GalleryPhoto } from '../data/gallery';
 
 const galleryYears = ['2026', '2025'] as const;
 type GalleryYear = typeof galleryYears[number];
+const galleryVideos = [
+  {
+    src: '/hackathon-highlights.mp4',
+    title: 'Health Hackathon Highlights',
+    description: 'Ideas, teamwork, prototypes, and memorable moments from the hackathon floor.',
+    poster: '/lottie/IMG_3810.webp',
+  },
+] as const;
 
 export default function GallerySection() {
   const [activeYear, setActiveYear] = useState<GalleryYear>('2026');
   const [activePhoto, setActivePhoto] = useState<GalleryPhoto | null>(null);
+  const [activeVideo, setActiveVideo] = useState(0);
   const closeButton = useRef<HTMLButtonElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const activeVideoButton = useRef<HTMLButtonElement>(null);
   const openedFrom = useRef<HTMLElement | null>(null);
   const photosByYear = useMemo(() => ({ '2026': galleryPhotos.slice(9), '2025': galleryPhotos.slice(0, 9) }), []);
   const visiblePhotos = photosByYear[activeYear];
   const activeIndex = activePhoto ? visiblePhotos.findIndex(photo => photo.id === activePhoto.id) : -1;
+  const currentVideo = galleryVideos[activeVideo];
+
+  const playVideo = useCallback((index: number) => {
+    setActiveVideo(index);
+  }, []);
+
+  const playNextVideo = useCallback(() => {
+    if (galleryVideos.length === 1) {
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0;
+        videoRef.current.play().catch(() => undefined);
+      }
+      return;
+    }
+    setActiveVideo(index => (index + 1) % galleryVideos.length);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.load();
+    video.play().catch(() => undefined);
+    activeVideoButton.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }, [activeVideo]);
 
   const closeLightbox = useCallback(() => {
     setActivePhoto(null);
@@ -81,8 +116,19 @@ export default function GallerySection() {
         </div>
 
         <div className="gallery-video-section reveal">
-          <div className="gallery-video-heading"><span className="eyebrow"><Film size={15}/> VIDEOS</span><h3>Short stories from the floor.</h3><p>Event films will autoplay silently when they become available.</p></div>
-          <div className="gallery-video-empty" role="status"><span><Play size={24} fill="currentColor"/></span><div><strong>Event films coming soon</strong><small>Highlights from Health Hackathon will appear here.</small></div></div>
+          <div className="gallery-video-heading"><span className="eyebrow"><Film size={15}/> VIDEOS</span><h3>Short stories from the floor.</h3><p>Watch the event films in sequence. When one ends, the next video starts automatically.</p><div className="gallery-video-now"><span>NOW PLAYING</span><strong>{currentVideo.title}</strong><small>{currentVideo.description}</small></div></div>
+          <div className="gallery-video-player">
+            <div className="gallery-video-frame">
+              <video ref={videoRef} controls autoPlay muted playsInline preload="metadata" poster={currentVideo.poster} onLoadedMetadata={event => { event.currentTarget.playbackRate = 1.5; }} onEnded={playNextVideo} aria-label={currentVideo.title}>
+                <source src={currentVideo.src} type="video/mp4"/>
+                Your browser does not support HTML video.
+              </video>
+              <span className="gallery-video-count">{String(activeVideo + 1).padStart(2, '0')} / {String(galleryVideos.length).padStart(2, '0')}</span>
+            </div>
+            <div className="gallery-video-playlist" aria-label="Event video playlist">
+              {galleryVideos.map((video, index) => <button ref={index === activeVideo ? activeVideoButton : undefined} type="button" key={video.src} className={index === activeVideo ? 'active' : ''} aria-pressed={index === activeVideo} onClick={() => playVideo(index)}><span className="gallery-video-thumb"><img src={video.poster} alt=""/><i><Play size={15} fill="currentColor"/></i></span><span><small>VIDEO {String(index + 1).padStart(2, '0')}</small><strong>{video.title}</strong></span></button>)}
+            </div>
+          </div>
         </div>
         <div className="gallery-footnote reveal"><Sparkles size={18}/><p>Real moments from previous Health Hackathon editions.</p></div>
       </div>
