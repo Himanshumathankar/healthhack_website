@@ -33,8 +33,24 @@
   letter-spacing: .03em;
 }
 .member-copy { min-width: 0; padding-top: 3px; overflow-wrap: anywhere; }
+.committee-member-text {
+  display: block;
+  padding: 3px 0 15px;
+  border-bottom: 1px solid var(--line);
+}
+.committee-member-text:last-child { border-bottom: 0; }
+.people-list:has(.committee-member-text) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 0;
+}
+.people-list:has(.committee-member-text) .committee-member-text {
+  margin-top: 0;
+}
 @media (max-width: 700px) {
   .committee-member { grid-template-columns: 72px minmax(0, 1fr); gap: 16px; }
   .member-portrait { width: 72px; border-radius: 8px; }
   .member-initials { font-size: 21px; }
+  .people-list:has(.committee-member-text) { grid-template-columns: 1fr; }
 }

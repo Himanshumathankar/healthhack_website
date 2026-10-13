@@ -8,6 +8,12 @@ export default function CommitteeMember({ person }: { person: Person }) {
   const initials = [words[0], words[words.length - 1]].map(word => word[0]).join('');
   const portrait = person.portrait;
 
+  if (person.hidePortrait) {
+    return <article className="person committee-member committee-member-text reveal" tabIndex={0}>
+      <div className="member-copy"><h4>{person.name}</h4><p>{person.role}</p></div>
+    </article>;
+  }
+
   return <article className="person committee-member reveal" tabIndex={0}>
     <div className="member-portrait">
       <span className="member-initials" aria-hidden="true">{initials}</span>

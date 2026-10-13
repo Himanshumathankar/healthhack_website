@@ -48,7 +48,7 @@ export const prizes = [
   {place:'3rd',inr:'₹25,000',usd:'$264'}, {place:'4th',inr:'₹10,000',usd:'$106'},
   {place:'5th',inr:'₹5,000',usd:'$53'},
 ];
-export type Person = {name:string;role:string;portrait?:{src:string;width:number;height:number;objectPosition:string}};
+export type Person = {name:string;role:string;portrait?:{src:string;width:number;height:number;objectPosition:string};hidePortrait?:boolean};
 export const committee: {title:string;people:Person[]}[] = [
   {title:'Chief Patron',people:[{name:"Hon’ble Dr. G. Viswanathan",role:'Founder & Chancellor, VIT Bhopal University',portrait:{src:'/assets/committee/g-viswanathan.webp',width:275,height:275,objectPosition:'50% 50%'}}]},
   {title:'Patrons',people:[
@@ -67,6 +67,19 @@ export const committee: {title:string;people:Person[]}[] = [
   {name:'Dr. Youseph Yazdi',role:'Associate Professor, Biomedical Engineering | Executive Director, Center for Bioengineering Innovation and Design (CBID) | Johns Hopkins University, USA',portrait:{src:'/assets/committee/youseph-yazdi.webp',width:300,height:300,objectPosition:'50% 50%'}},
   {name:'Dr. Hedy Alavi',role:'Associate Dean for Global Partnerships, Whiting School of Engineering | Johns Hopkins University, USA',portrait:{src:'/assets/committee/hedy-alavi.webp',width:300,height:300,objectPosition:'50% 50%'}}]},
   {title:'Co-Convenors',people:[{name:'Dr. Seenivasan R',role:'Director – International Relations Office | Professor, Center for Nanobiotechnology, VIT Vellore',portrait:{src:'/assets/committee/seenivasan-r.webp',width:326,height:326,objectPosition:'50% 50%'}}]},
+  {title:'Advisory Committee',people:[
+    {name:'Dr. S. Ananthakumaran',role:'Dean, Academics',hidePortrait:true},
+    {name:'Dr. Poonkuntran S',role:'Dean, SCAI',hidePortrait:true},
+    {name:'Dr. Pushpinder Singh Patheja',role:'Dean, SCOPE',hidePortrait:true},
+    {name:'Dr. Suresh M',role:'Dean, SEEE',hidePortrait:true},
+    {name:'Dr. Zaheer Kareem Ansari',role:'Dean, SASL',hidePortrait:true},
+    {name:'Dr. Sheetal Sharma',role:'Dean, SOA',hidePortrait:true},
+    {name:'Dr. S. Balaguru',role:'Dean, SMEC',hidePortrait:true},
+    {name:'Dr. Dasharathi Satpathy',role:'Dean, VITBS',hidePortrait:true},
+    {name:'Dr. R. Shriram',role:'Deputy Director, Placement and Training, VIT Bhopal University',hidePortrait:true},
+    {name:'Dr. Anant Kant Shukla',role:'Director of Students Welfare (DSW)',hidePortrait:true},
+    {name:'Dr. Shweta Mukherjee',role:'Dean, First Year',hidePortrait:true},
+  ]},
 ];
 export const coordinators = [
   'Dr. Rajneesh Kumar Patel','Dr. Suresh Dara','Dr. Anju Shukla','Dr. Rajdeep Singh Payal','Dr. Ankur Beohar',
