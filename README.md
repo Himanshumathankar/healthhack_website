@@ -98,3 +98,6 @@ Once the final public domain is selected, add it to the canonical and Open Graph
 The brochure is authoritative for this edition. Keep its published currency equivalents and verify event changes with the organizers before updating the content. The external registration form's access policy and conflicting dates are documented in the verification notes.
 
 Required font licenses and source-supported institutional attribution are retained.
+
+
+reading mode on

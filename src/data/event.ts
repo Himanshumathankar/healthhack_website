@@ -83,12 +83,15 @@ export const committee: {title:string;people:Person[]}[] = [
 ];
 export const coordinators = [
   'Dr. Rajneesh Kumar Patel','Dr. Suresh Dara','Dr. Anju Shukla','Dr. Rajdeep Singh Payal','Dr. Ankur Beohar',
-  'Dr. Saravanan D','Dr. Lakshmi D','Dr. V. Sivasankaran','Dr. Harshlata Vishwakarma','Dr. Thiyagu Priyadharsan',
+  'Dr. Saravanan D','Dr. Lakshmi D','Dr. V. Sivasankaran','Dr. Harshlata Vishwakarma','Dr. Thiyagu Priyadharshan',
   'Dr. Hemraj Lamkuche','Dr. Jastin Samuel','Dr. Kannan S','Dr. Karthik G L','Dr. Rohit Sharma','Dr. Deep Chandra Upadhyay',
   'Dr. Devaraju S','Prof. Pavithra','Dr. Evangeline Christina','Dr. Nella Anvesh Kumar','Dr. E. Nirmala',
   'Dr. Sumit Mittal','Dr. Biswajit Saha','Dr. Neeraj Sharma','Dr. N D Patel','Dr. Ajit Singh','Dr. Harish G',
-  'Dr. Suresh Kumar R S','Dr. Divya Mishra','Dr. Popuri Sai Krishnan','Dr. Mayank Sharma','Dr. Rudra Kalyan Nayak',
+  'Dr. Suresh Kumar RS','Dr. Divya Mishra','Dr. Popuri Sai Krishnan','Dr. Mayank Sharma','Dr. Rudra Kalyan Nayak',
   'Dr. Arunkumar K','Dr. Afzal Hussain','Dr. Trapti Sharma','Dr. Rajit Nair','Dr. Mayur Kumar Rajak','Dr. Ramraj Dangi','Dr. Ajay Sharma',
+  'Dr. Komarasamy G','Dr. Preetam Suman','Dr. Sasmita Padhy','Dr. Pradeep Kumar Mishra','Dr. Soumitra K Nayak',
+  'Dr. Saurav Prasad','Dr. Jitendra Pratap Singh Mathur','Dr. Satyam Kumar','Dr. Amit Singh','Dr. Benevatho Jaison A',
+  'Dr. Ashish Kumar Kesarwany','Dr. Juhi Kesarwani','Dr. Jyoti Badge','Dr. Neha Rathore',
 ];
 export const partners:Person[] = [
   {name:'Ms. Damini Agarwal',role:'Chief Technology Officer at IbT, USA'},
