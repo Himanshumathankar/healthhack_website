@@ -20,6 +20,7 @@ export default function GallerySection() {
   const closeButton = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const activeVideoButton = useRef<HTMLButtonElement>(null);
+  const previousVideo = useRef(activeVideo);
   const openedFrom = useRef<HTMLElement | null>(null);
   const photosByYear = useMemo(() => ({ '2026': galleryPhotos.slice(9), '2025': galleryPhotos.slice(0, 9) }), []);
   const visiblePhotos = photosByYear[activeYear];
@@ -46,7 +47,10 @@ export default function GallerySection() {
     if (!video) return;
     video.load();
     video.play().catch(() => undefined);
-    activeVideoButton.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (previousVideo.current !== activeVideo) {
+      activeVideoButton.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+    previousVideo.current = activeVideo;
   }, [activeVideo]);
 
   const closeLightbox = useCallback(() => {
